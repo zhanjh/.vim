@@ -64,3 +64,7 @@ nnoremap <leader>l :set list!<cr>
 
 set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
+
+" Highlight current line
+" http://vim.wikia.com/wiki/Highlight_current_line
+set cursorline
