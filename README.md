@@ -23,3 +23,8 @@ source ~/.vim/plug.vim
 source ~/.vim/init.vim
 source ~/.vim/plug-setting.vim
 ```
+## Install plug
+
+```
+:PlugInstall
+```
