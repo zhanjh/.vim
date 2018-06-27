@@ -6,7 +6,8 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'gregsexton/gitv'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -16,6 +17,7 @@ Plug 'junegunn/gv.vim'
 Plug 'mhinz/vim-signify'
 Plug 'janko-m/vim-test'
 Plug 'vim-scripts/wombat256.vim'
+Plug 'majutsushi/tagbar'
 
 " Initialize plugin system
 call plug#end()
