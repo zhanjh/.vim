@@ -1,8 +1,8 @@
 " NERDTree
 let g:NERDTreeQuitOnOpen=0 " close NERDTree after a file is opened
 let NERDTreeShowHidden=1 " show hidden files in NERDTree
-nmap <leader>k :NERDTreeToggle<cr> " Toggle NERDTree
-nmap <leader>y :NERDTreeFind<cr> " expand to the path of the file in the current buffer
+nmap <leader>k :NERDTreeToggle<CR> " Toggle NERDTree
+nmap <leader>y :NERDTreeFind<CR> " expand to the path of the file in the current buffer
 
 " -------------------------------
 " junegunn/fzf & junegunn/fzf.vim
@@ -78,7 +78,7 @@ set diffopt+=vertical "https://github.com/tpope/vim-fugitive/issues/510
 " -----------------
 " https://github.com/majutsushi/tagbar
 
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>c :TagbarToggle<CR>
 
 let g:tagbar_type_javascript = {
     \ 'ctagstype' : 'JavaScript',
