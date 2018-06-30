@@ -18,6 +18,9 @@ Plug 'mhinz/vim-signify'
 Plug 'janko-m/vim-test'
 Plug 'vim-scripts/wombat256.vim'
 Plug 'majutsushi/tagbar'
+Plug 'gabrielelana/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'pangloss/vim-javascript'
 
 " Initialize plugin system
 call plug#end()

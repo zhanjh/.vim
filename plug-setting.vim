@@ -83,6 +83,7 @@ nmap <leader>c :TagbarToggle<CR>
 let g:tagbar_type_javascript = {
     \ 'ctagstype' : 'JavaScript',
     \ 'kinds'     : [
+        \ 'A:Array',
         \ 'M:Modules',
         \ 'V:Variables',
         \ 'P:Properties',
@@ -95,3 +96,59 @@ let g:tagbar_type_javascript = {
         \ 'T:Tags'
     \ ]
 \ }
+
+" --------------------------
+"  gabrielelana/vim-markdown
+" --------------------------
+
+let g:markdown_enable_folding = 1
+
+" ------------------
+"  godlygeek/tabular
+" ------------------
+
+if exists(":Tabularize")
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a\ :Tabularize /\|<CR>
+    vmap <Leader>a\ :Tabularize /\|<CR>
+    nmap <Leader>a: :Tabularize /:\zs<CR>
+    vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
+" call the :Tabularize command each time you insert a | character.
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+function! s:align()
+    let p = '^\s*|\s.*\s|\s*$'
+    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+        let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+        let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+        Tabularize/|/l1
+        normal! 0
+        call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+    endif
+endfunction
+
+" -----------------------
+" pangloss/vim-javascript
+" -----------------------
+
+augroup javascript_folding
+    au!
+    au FileType javascript setlocal foldmethod=syntax
+augroup END
+
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
+
+set conceallevel=1
