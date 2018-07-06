@@ -68,3 +68,8 @@ set directory=~/.vim/tmp
 " Highlight current line
 " http://vim.wikia.com/wiki/Highlight_current_line
 set cursorline
+
+" fold
+" http://vim.wikia.com/wiki/All_folds_open_when_opening_a_file
+set foldmethod=syntax
+set foldlevelstart=20

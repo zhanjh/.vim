@@ -23,7 +23,7 @@ Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 " Plug 'Quramy/vim-js-pretty-template'
-Plug 'vim-scripts/phpfolding.vim'
+"Plug 'vim-scripts/phpfolding.vim'
 Plug 'StanAngeloff/php.vim'
 
 
