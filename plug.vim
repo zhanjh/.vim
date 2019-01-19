@@ -25,7 +25,7 @@ Plug 'jelera/vim-javascript-syntax'
 " Plug 'Quramy/vim-js-pretty-template'
 "Plug 'vim-scripts/phpfolding.vim'
 Plug 'StanAngeloff/php.vim'
-
+Plug 'rust-lang/rust.vim'
 
 " Initialize plugin system
 call plug#end()

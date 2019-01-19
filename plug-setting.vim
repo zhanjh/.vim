@@ -48,6 +48,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 let g:ale_php_phpcs_standard = 'PSR2' " php
 let g:ale_php_phpstan_level = 7
 
+let g:ale_linters = {'rust': ['cargo', 'rls', 'rustc']}
+let g:ale_rust_rls_toolchain = 'stable'
+
 highlight ALEError cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 highlight ALEWarning cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 
@@ -63,6 +66,10 @@ let test#strategy = {
   \ 'file':    'dispatch',
   \ 'suite':   'basic',
 \}
+
+
+" rust-vim
+nmap <silent> <leader>rt :RustTest<CR>
 
 " ack.vim
 " https://github.com/mileszs/ack.vim
